@@ -1,6 +1,6 @@
 CC := gcc
-CFLAGS := -std=c99 -Wall -Wextra -g
-LFLAGS := -lm -lxmemtools -lcolors
+CFLAGS := -Wall -Wextra -g
+LFLAGS := -lm -lxmemtools
 OUTPUT := output
 SRC := src
 INCLUDE := include lib
@@ -31,7 +31,6 @@ $(OUTPUT):
 
 $(MAIN): $(OBJECTS)
 	$(MAKE) -C $(LIB)/xmemtools
-	$(MAKE) -C $(LIB)/colors
 	$(CC) $(CFLAGS) $(INCLUDES) -o $(OUTPUTMAIN) $(OBJECTS) $(LFLAGS) $(LIBS)
 	$(CTAGS) $(CTAGSFLAGS) $(CTAGSDIRECTORIES)
 
@@ -45,7 +44,6 @@ run: all
 .PHONY: clean
 clean:
 	$(MAKE) -C $(LIB)/xmemtools clean
-	$(MAKE) -C $(LIB)/colors clean
 	$(RM) $(OUTPUT) $(OBJECTS)
 	@echo Clean successful
 
