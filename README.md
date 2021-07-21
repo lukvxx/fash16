@@ -3,8 +3,13 @@
 ## Description
 Returns a hash from first argument
 
-## Usage
-to compile type `make` in the root of the project and the executable will be in the `output`
+## cloning and compiling
 
-fash16 takes one argument and this is the string to be hashed.
-If no argument was supplied fash16 exits with code 1.
+### cloning
+to clone this repo use `git clone https://github.com/DevManu-de/fash16.git --recursive`
+
+### compiling
+type `make` in the root of the project, the executable will be output/fash16
+
+## Usage
+fash16 takes one argument and this is the string to be hashed. If no argument was supplied fash16 exits with code 1.
